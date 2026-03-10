@@ -1,0 +1,143 @@
+{
+  "label": "Standing Game",
+  "tree": {
+    "id": "st_root",
+    "label": "Standing",
+    "type": "root",
+    "info": {
+      "title": "Standing Game – Perusteet",
+      "body": "<b>Tavoite:</b> Kontrolloi etäisyyttä ja horjuta vastustajaa saadaksesi alasviennin tai vetääksesi guardin hallitsevasta positiosta.<br><br><b>Kolme pääasetta:</b><ul><li><b>Arm Drag</b> — pääse selkään käden nopeudella</li><li><b>Standing Kimura Grip</b> — 2-on-1 kontrolli, joka riisuu hyökkäyksen ja avaa heittoja tai alasvientejä</li><li><b>Single Leg</b> — matalan riskin ja korkean tuoton alasvienti, joka ketjuuntuu kumpaankin edelliseen</li></ul>Alasviennin jälkeen: asetu Top Half Guardiin tai leikkaa suoraan läpi Knee Slidellä."
+    },
+    "children": [
+      {
+        "id": "arm_drag",
+        "label": "Arm Drag",
+        "sub": "Hand speed → back",
+        "type": "category",
+        "info": {
+          "title": "Arm Drag System",
+          "body": "<b>Tavoite:</b> Ohjaa käsi uudelleen nopeudella ja sujahda selän taakse ennen kuin hän ehtii reagoida.<br><br><b>Perus Arm Drag:</b><ol><li>Ota ristiote ranteesta saman puolen kädellä.</li><li>Samanaikaisesti koukkaa ojentajan/kyynärpään takaa toisella kädellä.</li><li>Nykäise käsivarsia terävästi kehon poikki — vedä, älä työnnä.</li><li>Astu samalla välittömästi taakse. Seatbelt → alasvienti selästä.</li></ol><b>Avain:</b> Astuminen ja vetäminen pitää tapahtua samanaikaisesti. Jos vedät ensin ja astut sitten, hän ehtii palautua."
+        },
+        "children": [
+          {
+            "id": "ad_back_take",
+            "label": "Back Take → Takedown",
+            "info": {
+              "title": "Arm Drag → Back Take → Takedown",
+              "body": "<b>Suoritus:</b><ul><li>Dragin jälkeen, astu tiukasti taakse ja ota heti seatbelt (päällimmäinen käsi hartian yli, alempi kainalon ali).</li><li>Aja eteenpäin tai kampita lähi-nilkka (osoto / ulkopuolen kampitus) viedäksesi hänet mattoon.</li><li>Seuraa suoraan selkäkontrolliin — aseta hookit tai siirry rear mountiin.</li></ul>"
+            }
+          },
+          {
+            "id": "ad_circle_post",
+            "label": "Circle & Post Bait",
+            "info": {
+              "title": "Circle & Post on Shoulder (Reaction Bait)",
+              "body": "<b>Konsepti:</b> Liiku sivuttain ja laita kätesi kauimmaisen hartian taakse. Tämä pakottaa puolustuksellisen reaktion — heti kun vastustaja yrittää poistaa kätesi tai kääntyä sinuun päin, käsi on alttiina.<br><br><b>Suoritus:</b><ul><li>Astu sivulle, laita kämmen kauimmaisen hartian taakse.</li><li>Odota — kun hän siirtää kätensä poistaakseen omasi, ota välittömästi ristiote ranteesta ja tee arm drag.</li><li>Tämä luo ennakoitavan, korkean onnistumisprosentin entryn (kuzushi reaktiosta).</li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "kimura_stand",
+        "label": "Standing Kimura",
+        "sub": "2-on-1 figure-4",
+        "type": "category",
+        "info": {
+          "title": "Standing Kimura Grip",
+          "body": "<b>Tavoite:</b> 2-on-1 figure-four-ote, joka riisuu hyökkäävän käden ja antaa useita lopetuksia.<br><br><b>Ote:</b><ol><li>Ota ristiote ranteesta saman puolen kädellä.</li><li>Vie toinen kätesi käden yli ja ali, tarttuen omaan ranteeseesi (figure-4).</li><li>Kiinnitä lukko tiukasti omaan rintaasi — älä koskaan päästä sitä kellumaan vapaana.</li></ol><b>Avainperiaate:</b> Tällä otteella hän ei voi lyödä, ottaa kaulusotetta tai sukeltaa jalkoihin. Hallitset koko tilannetta."
+        },
+        "children": [
+          {
+            "id": "kst_takedown",
+            "label": "Kimura Takedown",
+            "info": {
+              "title": "Kimura Takedown (Shoulder Crank to Mat)",
+              "body": "<b>Suoritus:</b><ul><li>Kun ote on lukittu rintaasi, kierrä koko vartaloasi ja aja kyynärpää/hartia kohti mattoa.</li><li>Vastustaja tyypillisesti rullaa paineen alle tai menee kilpikonnaan (turtle).</li><li>Seuraa selkään tai Top Half Guardiin riippuen laskeutumisesta.</li></ul>"
+            }
+          },
+          {
+            "id": "kst_sumi",
+            "label": "Sumi Gaeshi",
+            "info": {
+              "title": "Sumi Gaeshi (Sacrifice Throw)",
+              "body": "<b>Tilanne:</b> Vastustaja vastustaa Kimura-alasvientiä nostamalla lantiota ja parantamalla ryhtiä.<br><br><b>Suoritus:</b><ul><li>Älä taistele ryhtiä vastaan — käytä sitä. Istu suoraan alas lantion alle pitäen Kimura-ote.</li><li>Aseta toinen tai molemmat perhoskoukut reisille.</li><li>Heitä hänet puhtaasti pään yli. Seuraa suoraan mounttiin.</li></ul>"
+            }
+          },
+          {
+            "id": "kst_single",
+            "label": "Drop to Single Leg",
+            "info": {
+              "title": "Standing Kimura → Single Leg",
+              "body": "<b>Tilanne:</b> Vastustajan ylävartalo on kiireinen taistellessaan otetta vastaan — etujalka on suojaamaton.<br><br><b>Suoritus:</b><ul><li>Nyki kättä alas ja eteenpäin Kimura-otteella rikkoaksesi ryhdin ja ladataksesi painon etujalalle.</li><li>Vaihda tasoa välittömästi ja ammu kohti painotettua jalkaa.</li><li>Olet jo käden sisäpuolella — giljotiinien riski on pieni. Viimeistele tavallisella single legillä.</li></ul>"
+            }
+          },
+          {
+            "id": "kst_armlock",
+            "label": "Armlock",
+            "info": {
+              "title": "Standing Armlock (Straight or Bent)",
+              "body": "<b>Tilanne:</b> Vastustaja vastustaa jäykällä suoralla kädellä tai kyynärpää on taipunut väännettävään asentoon.<br><br><b>Suoritus:</b><ul><li><b>Suora käsi:</b> Astu kyynärpään alle ja käytä ylöspäin suuntautuvaa vipua niveltä vastaan (ude gatame).</li><li><b>Taipunut käsi (Kimura):</b> Väännä figure-4 selän taakse — lopeta seisten tai vie hänet ensin mattoon.</li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "single_leg",
+        "label": "Single Leg",
+        "sub": "Level change",
+        "type": "category",
+        "info": {
+          "title": "Single Leg Takedown",
+          "body": "<b>Tavoite:</b> Matalan riskin alasvienti, joka ketjuuntuu luonnollisesti Arm Dragiin ja Standing Kimuraan.<br><br><b>Entryt:</b><ol><li><b>Suora tasonvaihto:</b> Ponnahda polvista ja ammu suoraan etujalkaan — pää sisäpuolella suojaamassa giljotiineiltä.</li><li><b>Arm Drag hämäys:</b> Aloita arm drag; kun hän nykäisee kätensä takaisin (ladaten etujalan), ammu välittömästi single leg.</li><li><b>Kimura drop:</b> Vedä Kimura-otetta alas ladataksesi etujalan, ja ammu sitten.</li></ol>"
+        },
+        "children": [
+          {
+            "id": "sl_run_pipe",
+            "label": "Run the Pipe",
+            "info": {
+              "title": "Run the Pipe (Single Leg Finish)",
+              "body": "<b>Tilanne:</b> Sinulla on single leg varmistettuna pää sisäpuolella, vastustaja hyppii.<br><br><b>Suoritus:</b><ul><li>Aja eteenpäin häntä kohti — 'running the pipe' — pakottaen peruuttamaan hallitsemattomasti.</li><li>Kun tukijalka luistaa tai hän yli-istuu taaksepäin, aja jalkaa kehosi poikki mattoon.</li><li>Viimeistele Top Half Guardiin tai leikkaa suoraan Knee Sliceen.</li></ul>"
+            }
+          },
+          {
+            "id": "sl_trip",
+            "label": "Outside Trip",
+            "info": {
+              "title": "Outside Trip / Ankle Pick",
+              "body": "<b>Tilanne:</b> Vastustaja sprawlaa tai astuu taaksepäin siirtäen lantion pois sinusta.<br><br><b>Suoritus:</b><ul><li>Kun hän astuu taaksepäin tukijalalla, kurota alas ulommalla kädelläsi ja poimi nilkasta (ankle pick).</li><li>Aja samalla eteenpäin kehon painolla — vastustaja kaatuu taaksepäin ilman tukipistettä.</li><li>Laskeudu Top Half Guardiin tai Side Controliin.</li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "after_takedown",
+        "label": "After Takedown",
+        "sub": "Settle or cut",
+        "type": "category",
+        "info": {
+          "title": "Takedown Finish & Passing",
+          "body": "<b>Välitön päätös:</b> Sillä hetkellä kun vastustaja osuu mattoon, valitse yksi polku:<br><br><b>1. Rauhoita → Top Half Guard</b> — Vakauta, anna painetta ylhäältä, jauha kontrolloitu ohitus.<br><b>2. Leikkaa heti → Knee Slide</b> — Käytä alasviennin liike-energiaa ennen kuin hän ehtii asettaa kehyksiä."
+        },
+        "children": [
+          {
+            "id": "td_half_guard",
+            "label": "Top Half Guard",
+            "info": {
+              "title": "Settle into Top Half Guard",
+              "body": "<b>Milloin:</b> Vastustaja laskeutui puolustavasti, sai kehyksen väliin, tai haluat kontrolloidumman ohituksen.<br><br><b>Suoritus:</b><ul><li>Pudottaudu Top Half Guardiin — kontrolloi lantiota polvellasi ja aseta crossface.</li><li>Tämä estää nopean scramble-pakenemisen ja antaa rakentaa murskaavaa yläpainetta.</li><li>Top Halfista: jauha Side Controliin, metsästä Kimura/Darce -ansoja, tai odota Knee Slice -avautumista.</li></ul>"
+            }
+          },
+          {
+            "id": "td_knee_slide",
+            "label": "Knee Slide Pass",
+            "sub": "Use the momentum",
+            "info": {
+              "title": "Knee Slide / Knee Cut Pass",
+              "body": "<b>Milloin:</b> Vastustaja ei ole ehtinyt asettaa kehyksiä vielä — välittömästi alasviennin jälkeen ennen palautumista.<br><br><b>Kolme lopetusta:</b><ul><li><b>Standardi Knee Slide → Side Control:</b> Aja polvi kovaa läpi reiden ja lantion välistä. Crossface estää kääntymisen, liu'u läpi Side Controliin.</li><li><b>Knee Slide Mounttiin:</b> Jos lantio on litteänä ja jalat eivät blokkaa, liu'u ohitus kokonaan yli ja ota Mount suoraan — ohita Side Control.</li><li><b>Knee Slide → Back Take:</b> Kun vastustaja kääntyy sinua kohti epätoivossa, sukella suoraan taakse, koukkaa lähijalka (twister hook), ja ota seatbelt — varmista selkä.</li></ul>"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

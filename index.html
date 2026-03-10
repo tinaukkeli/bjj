@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -35,6 +35,7 @@
   <div id="stage">
     <svg id="edges"></svg>
   </div>
+  <p id="loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--muted);font-size:0.9rem;">Ladataan...</p>
   <p class="hint" id="hint">Pinch to zoom · Drag to pan · Tap a node</p>
 </div>
 
@@ -46,14 +47,15 @@
   </div>
 </div>
 
-<script src="data.js"></script>
+<!-- app.js: pure rendering logic (no data) -->
 <script src="app.js"></script>
+<!-- loader.js: fetches JSON data files and calls initApp() -->
+<script src="loader.js"></script>
+
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/bjj/sw.js')
-        .then(reg => console.log('SW registered'))
-        .catch(err => console.log('SW ref failed', err));
+      navigator.serviceWorker.register('/bjj/sw.js');
     });
   }
 </script>

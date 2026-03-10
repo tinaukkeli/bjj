@@ -1,0 +1,260 @@
+{
+  "label": "Half Guard",
+  "tree": {
+    "id": "hg_root",
+    "label": "Half Guard",
+    "type": "root",
+    "info": {
+      "title": "Half Guard – Perusteet",
+      "body": "<b>Tavoite:</b> Estä vastustajaa litistämästä sinua mattoon ja luo kulmia tai etäisyyttä hyökkäyksille.<br><br><b>Tärkeimmät yksityiskohdat:</b><ul><li><b>Kylkiasento:</b> Pysy aina tiukasti kyljelläsi. Hartiat matossa = vaara.</li><li><b>Kehykset/Frames:</b> Pidä päällimmäinen käsi vastustajan rinnan tai hartian poikki vastustamaan painoa.</li><li><b>Alempi käsi:</b> Estä aktiivisesti crossface hauislihaksella tai ranteella.</li></ul>Tästä valitset suuntasi sen perusteella, mihin vastustaja antaa painoa tai jättää tilaa."
+    },
+    "children": [
+      {
+        "id": "knee_shield",
+        "label": "Knee Shield",
+        "sub": "Z-Guard / Distance",
+        "type": "category",
+        "info": {
+          "title": "Knee Shield / Z-Guard",
+          "body": "<b>Suunta:</b> Etäisyyden hallinta ja ohituksen pysäyttäminen.<br><br><b>Miten päästä positioon:</b><ol><li><b>Kilpi:</b> Aja päällimmäinen polvesi vastustajan rintaan tai hauikseen (Z-muoto).</li><li><b>Alempi hookki:</b> Kontrolloi lantiota tai sisäreittä alemmalla jalalla.</li><li><b>Kehykset:</b> Pidä kädet vahvoina pitääksesi paineen poissa ylävartalostasi.</li></ol><b>Huomio:</b> Erinomainen peruspositio isompia vastustajia vastaan ennen siirtymistä lähitaisteluun."
+        },
+        "children": [
+          {
+            "id": "ks_arm_drag",
+            "label": "Arm Drag",
+            "info": {
+              "title": "Arm Drag to Back",
+              "body": "<b>Tilanne:</b> Vastustaja nojaa kilpeesi tai kurottaa kaulukseen/kasvoihin.<br><br><b>Suoritus:</b><ul><li>Ota ristiote kurottavasta hihasta tai ranteesta saman puolen kädellä.</li><li>Vedä kättä terävästi rintasi yli samalla kun avaat kilpipolven.</li><li>Käytä liike-energiaa kiivetäksesi ylös ja suoraan selkään.</li></ul>"
+            }
+          },
+          {
+            "id": "ks_dogfight",
+            "label": "Dogfight Entry",
+            "info": {
+              "title": "Transition to Dogfight",
+              "body": "<b>Tilanne:</b> Vastustaja jäätyy kilpeä vasten tai istuu taaksepäin; haluat vaihtaa etäisyyden lähitaisteluun.<br><br><b>Suoritus:</b><ul><li>Pudota polvikilpi nopeasti reiden ohi.</li><li>Ammu ulompi käsi syvälle kainaloon (underhook) samalla liikkeellä.</li><li>Nouse: kyynärpää → käsi → polvi = Dogfight.</li></ul>"
+            }
+          },
+          {
+            "id": "ks_john_wayne",
+            "label": "John Wayne Sweep",
+            "info": {
+              "title": "John Wayne Sweep (Knee Lever)",
+              "body": "<b>Tilanne:</b> Vastustaja antaa raskasta painetta kilpeesi yrittäen romahduttaa sen.<br><br><b>Suoritus:</b><ul><li>Lukitse molemmat jalat tiukasti ohittavan jalan ympärille (nilkka nilkkaan).</li><li>Ota kiinni lähimmästä hihasta molemmin käsin (2-on-1).</li><li>Ammu lantiosi pitkin mattoa ja väännä vastustajan polvea terävästi sivulle — polvi toimii tukipisteenä, joka vie kaiken tasapainon.</li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "kimura_trap",
+        "label": "Kimura Trap",
+        "sub": "Upper body control",
+        "type": "category",
+        "info": {
+          "title": "Kimura Trap System",
+          "body": "<b>Suunta:</b> Ylävartalon hyökkäys whizzereitä, matalia ohituksia tai matossa olevia käsiä vastaan.<br><br><b>Miten päästä positioon:</b><ol><li><b>Ote:</b> Saman puolen käsi tarttuu ranteeseen. Vie toinen käsi yli ja ali ja tartu omaan ranteeseesi (figure-4 / kimura lock).</li><li><b>Yhdistä:</b> Vedä lukko tiukasti rintaasi vasten — älä koskaan anna sen kellua irti kehyksestäsi.</li></ol><b>Huomio:</b> Yksi vahvimmista kontrolleista BJJ:ssä. Voidaan käyttää lopetuksena tai vipuvarrena sweepeissä."
+        },
+        "children": [
+          {
+            "id": "kt_sweep",
+            "label": "Kimura Sweep",
+            "info": {
+              "title": "Kimura Sweep",
+              "body": "<b>Tilanne:</b> Sinulla on Kimura, mutta vastustaja istuu raskaasti leveällä perusasennolla.<br><br><b>Suoritus:</b><ul><li>Lukitse jalat tiukasti alaselän yli tai aseta perhoskoukku (butterfly hook).</li><li>Aja kättä lukon avulla kohti kainaloa ja taaksepäin, luoden jäykän vipuvarren.</li><li>Käytä koko vartaloasi ja koukkujasi heittääksesi hänet sivuttain hartialleen.</li></ul>"
+            }
+          },
+          {
+            "id": "kt_roll",
+            "label": "Roll to Back",
+            "info": {
+              "title": "Roll to Back / Tarikoplata",
+              "body": "<b>Tilanne:</b> Vastustaja ajaa voimakkaasti eteenpäin estääkseen Kimura sweepin.<br><br><b>Suoritus:</b><ul><li>Ohjaa paine uudelleen liu'uttamalla pääsi vastustajan painon alle kohti mattoa.</li><li>Säilytä Kimura-lukko ja pyörähdä (roll) alemman hartian ja niskan yli.</li><li>Nouset suoraan selkäkontrolliin, tai avaat Tarikoplata-mahdollisuuden astumalla jalkasi käden yli.</li></ul>"
+            }
+          },
+          {
+            "id": "kt_finish",
+            "label": "Submission",
+            "info": {
+              "title": "Kimura Submission",
+              "body": "<b>Tilanne:</b> Vastustajan käsi ajelehtii liian kauas kehosta tai ojentuu ristiin.<br><br><b>Suoritus:</b><ul><li>Pyörähdä selällesi, heitä päällimmäinen jalka alaselän yli estääksesi pyörähtämisen (rollout).</li><li>Käytä kauimmaista perhoskoukkua asettaaksesi hänet oikeaan kulmaan.</li><li>Pieni kierto ja aja rannetta kohti yläselkää — taputus.</li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "butterfly_half",
+        "label": "Butterfly Half",
+        "sub": "Elevation / Lift",
+        "type": "category",
+        "info": {
+          "title": "Butterfly Half Guard",
+          "body": "<b>Suunta:</b> Pysäytä eteenpäin suuntautuva paine ja tuhoa tasapaino elevaatiolla.<br><br><b>Miten päästä positioon:</b><ol><li>Luo tilaa katkaravulla (shrimp) tai hyödynnä tilanne, kun vastustaja nojaa eteen.</li><li>Aseta vapaa jalkasi reisien väliin perhoskoukuksi (jalkapöytä sisäreidellä).</li><li>Pumppaa koukulla pitääksesi painopisteen epävakaana aina kun vastustaja puskee sisään.</li></ol>"
+        },
+        "children": [
+          {
+            "id": "bh_sweep",
+            "label": "Butterfly Sweep",
+            "info": {
+              "title": "Butterfly Sweep",
+              "body": "<b>Tilanne:</b> Vastustaja ajaa ylitsesi raskaalla paineella yrittäen litistää sinut.<br><br><b>Suoritus:</b><ul><li>Tiukka overhook pään puolen kädellä; underhook tai pään kontrolli kauimmaisella kädellä.</li><li>Kaadu reilusti underhookin puolelle.</li><li>Potkaise ja nosta perhoskoukulla viistosti ylöspäin — kuin jalkaprässi kattoon.</li><li>Seuraa liikettä suoraan mounttiin säilyttäen otteet pyörähdyksen ajan.</li></ul>"
+            }
+          },
+          {
+            "id": "bh_slx",
+            "label": "Single Leg X Entry",
+            "info": {
+              "title": "Transition to Single Leg X (Ashi Garami)",
+              "body": "<b>Tilanne:</b> Vastustaja leventää asentoaan tai ajaa taaksepäin estäen sweepin.<br><br><b>Suoritus:</b><ul><li>Käytä koukkua vain osittaiseen nostoon (painon keventäminen, ei täysi nosto).</li><li>Pujota alempi koukku syvälle jalkojen väliin asettaen jalkapöytäsi kauimmaisen jalan ulkopuolelle.</li><li>Paina toinen jalkasi saman jalan takaosaan — vahva SLX-positio (Ashi Garami), joka avaa jalkalukot ja pystyynnousu-sweepit.</li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "rdlr",
+        "label": "RDLR",
+        "sub": "Reverse De La Riva",
+        "type": "category",
+        "info": {
+          "title": "Reverse De La Riva (RDLR)",
+          "body": "<b>Suunta:</b> Half Guardin vastaus, kun vastustaja nousee seisomaan tehdäkseen Knee Slide -ohituksen.<br><br><b>Miten päästä positioon:</b><ol><li>Vastustaja ponnahtaa pystyyn luoden dynaamisen Knee Slice -uhan.</li><li>Litistä ylävartalosi. Kierrä sisempi half guard -jalkasi seisovan jalan ulkopuolelta takareiteen.</li><li>Aseta vapaan jalkasi jalkapohja lantiolle — paineen ja etäisyyden hallinta.</li></ol>"
+        },
+        "children": [
+          {
+            "id": "rdlr_kiss",
+            "label": "Kiss of the Dragon",
+            "info": {
+              "title": "Kiss of the Dragon",
+              "body": "<b>Tilanne:</b> Vastustaja ajaa eteenpäin luoden raskaan paineen RDLR-koukkuun.<br><br><b>Suoritus:</b><ul><li>Vapauta lantiota kontrolloiva jalka, anna vastustajan tulla hieman eteenpäin ja tartu kauimmaiseen nilkkaan alhaaltapäin.</li><li>Käytä RDLR-koukkua tukipisteenä invertataksesi lantiosi kohti kattoa jalkojen väliin.</li><li>Kierrä kehosi jalan ympäri — nouset esiin suoraan vastustajan takaa selkäkontrolliin.</li></ul>"
+            }
+          },
+          {
+            "id": "rdlr_tripod",
+            "label": "Tripod Sweep",
+            "info": {
+              "title": "Tripod Sweep",
+              "body": "<b>Tilanne:</b> Vastustaja on varovainen, paino taaksepäin pitkässä asennossa yrittäen vääntää koukkuasi auki.<br><br><b>Suoritus:</b><ul><li>Ota tiukka ristiote kauimmaisesta nilkasta.</li><li>RDLR-koukku tukee yhtä puolta; toinen jalkasi asettuu poikittain lähi-lantion/säären yli.</li><li>Potkaise terävästi alaspäin lantiosta samalla kun vedät nilkkaa ylöspäin — kaataa vastustajan taaksepäin.</li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "dogfight",
+        "label": "Dogfight",
+        "sub": "Underhook",
+        "type": "category",
+        "info": {
+          "title": "Dogfight (Underhook Route)",
+          "body": "<b>Suunta:</b> Kainalon ali. Toimii, kun vastustaja jättää lähimmän kätensä auki.<br><br><b>Miten päästä positioon:</b><ol><li><b>Underhook:</b> Ammu ulompi käsi syvälle kainaloon, tartu selkälihakseen tai vyöhön. Pidä pääsi tiukasti rinnassa/leuassa — suoja giljotiinilta.</li><li><b>Alemman käden kontrolli:</b> Pidä kiinni kaukaisesta kädestä tai polvesta estääksesi crossfacen.</li><li><b>Nouse:</b> Vedä alempi jalkasi lantion alle → kyynärpäälle → kädelle → polville = Dogfight.</li></ol>"
+        },
+        "children": [
+          {
+            "id": "df_knee_tap",
+            "label": "Knee Tap Sweep",
+            "info": {
+              "title": "Knee Tap Sweep",
+              "body": "<b>Tilanne:</b> Vastustaja puskee sinua kohti (antaa takaisinpainetta) Dogfightissa.<br><br><b>Suoritus:</b><ul><li>Päästä irti matosta alemmalla kädellä (purista underhookia kovempaa), kurota pitkälle kaukaisempaan polveen.</li><li>Blokkaa polvi paikalleen, jotta hän ei voi astua taaksepäin.</li><li>Aja eteenpäin underhookilla ja koko kehon painolla, pää leuan/rinnan alla.</li><li>Pidä underhook kaatumisen läpi — päädyt vahvaan päällispositioon.</li></ul>"
+            }
+          },
+          {
+            "id": "df_roll_under",
+            "label": "Roll Under",
+            "info": {
+              "title": "Roll Under Sweep",
+              "body": "<b>Tilanne:</b> Vastustaja puristaa voimakkaan whizzerin/overhookin underhook-käteesi painaen hartiaasi kohti mattoa.<br><br><b>Suoritus:</b><ul><li>Älä taistele painetta vastaan — vaihda suuntaa. Sukella päällesi alaspäin vastustajan rinnan alle.</li><li>Tartu lähimpään jalkaan (reiteen tai nilkkaan) alemmalla kädelläsi. Aja underhook-käsi syvemmälle haaroihin.</li><li>Pyörähdä sivuttain oman hartiasi yli.</li><li>Pyörähdys käyttää whizzer-painetta tekemään hänestä painottoman — ohjaa hänet selälleen ja nouse päälle.</li></ul>"
+            }
+          },
+          {
+            "id": "df_back_take",
+            "label": "Back Take",
+            "info": {
+              "title": "Back Take from Dogfight",
+              "body": "<b>Tilanne:</b> Vastustaja yrittää karata nojaamalla taaksepäin tai vetämällä kätensä irti underhookistasi.<br><br><b>Suoritus:</b><ul><li>Paino karkaa taaksepäin — vedä itsesi underhookilla tiiviimmin selkään.</li><li>Kurota kaukaisella kädellä kauimmaiseen lantioon kahden pisteen kontrollia varten.</li><li>Liukene nopeasti taakse, laita ensimmäinen hookki lantioon.</li><li>Seatbelt ensin (yksi käsi hartian yli, toinen kainalon alta) ennen toisen hookin hakemista — estää pakenemisen.</li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "octopus",
+        "label": "Octopus / 2.0",
+        "sub": "Outside / Overhook",
+        "type": "category",
+        "info": {
+          "title": "Octopus / Octopus 2.0 (Overhook Route)",
+          "body": "<b>Suunta:</b> Yli ja ulkopuolelle. Toimii, kun vastustaja yrittää crossfacea jättäen ulkoreunan avoimeksi.<br><br><b>Miten päästä positioon:</b><ol><li><b>Octopus Grip:</b> Liu'u painon alle. Kurota päänpuoleisella kädelläsi yli selän vastustajan kauimmaiseen kainaloon/kylkeen. Olet nyt viistottain hänen selkänsä takana.</li><li><b>Octopus 2.0 (Butterfly Hook):</b> Nosta lantiotasi hieman ja sujahda alempi jalka jalkojen väliin asettaen perhoskoukku sisäreiteen.</li></ol><b>Huomio:</b> Tämä hookki + selkäote on tuhoisa yhdistelmä — hookki kantaa painon tehden vastustajasta kevyen ja helposti pyöritettävän."
+        },
+        "children": [
+          {
+            "id": "oct_back_take",
+            "label": "Back Take",
+            "info": {
+              "title": "Back Take from Octopus",
+              "body": "<b>Tilanne:</b> Vastustaja jäätyy tai nojaa eteenpäin, eikä reagoi Octopus-otteeseen riittävän nopeasti.<br><br><b>Suoritus:</b><ul><li>Octopus-ote on vienyt sinut jo osittain taakse — jatka liikettä ylöspäin.</li><li>Käytä perhoskoukkua nostamaan lantiota hieman, tehden tilaa alemmalle polvellesi liukua alle ja selkään.</li><li>Heitä ulompi jalkasi lantion yli (twister hook) tai kiipeä suoraan seatbelt-selkäkontrolliin.</li></ul>"
+            }
+          },
+          {
+            "id": "oct_hip_bump",
+            "label": "Hip Bump Sweep",
+            "info": {
+              "title": "Hip Bump Sweep (Octopus)",
+              "body": "<b>Tilanne:</b> Vastustaja panikoi Octopus-uhan edessä, perääntyy nopeasti ja nostaa ylävartaloaan.<br><br><b>Suoritus:</b><ul><li>Kun vastustaja nostaa painoaan ylös ja taakse, perusasento nousee irti matosta.</li><li>Säilytä tiukka ote vyötärön ympärillä. Nouse istumaan terävästi hänen kanssaan.</li><li>Aja lantiosi kovaa hänen kylkeensä (hip bump).</li><li>Olet hänen takanaan käsi ansassa — hän ei voi laittaa kättä mattoon postiksi. Seuraa suoraan mounttiin.</li></ul>"
+            }
+          },
+          {
+            "id": "oct_hook_sweep",
+            "label": "Hook Sweep",
+            "sub": "(needs 2.0 hook)",
+            "info": {
+              "title": "Hook Sweep (Octopus 2.0)",
+              "body": "<b>Tilanne:</b> Vastustaja ajaa rintaansa raskaasti alaspäin palauttaakseen normaalin half guard -paineen.<br><br><b>Suoritus:</b><ul><li>Älä työnnä vastaan — käytä sen sijaan perhoskoukkua.</li><li>Kaadu taaksepäin matalalle hartiallesi, vedä häntä tiukemmin Octopus-otteella.</li><li>Nosta samanaikaisesti perhoskoukulla — elevaatio ylös ja sivulle.</li><li>Ohjaa ylävartalo (Octopus-ote) pään yli selkään. Seuraa päälle.</li></ul>"
+            }
+          },
+          {
+            "id": "oct_no_hook",
+            "label": "Kosoto Hook",
+            "sub": "(outer leg, no butterfly)",
+            "info": {
+              "title": "Kosoto Hook (Classic Octopus – No Butterfly Hook)",
+              "body": "<b>Konteksti:</b> Sinulla on Octopus-selkäote, mutta et ole saanut perhoskoukkua sisään. Sen sijaan vapaa päällimmäinen jalkasi koukkaa <i>ulkopuolelta</i> kaukaisemman jalan polvitaipeen taakse — Ko-soto-tyylinen koukku ulkoa.<br><br><b>Miten asettaa Kosoto-koukku:</b><ol><li>Heilauta vapaa jalkasi yli ja koukkaa jalkaterä kauimmaisen jalan polvitaipeen taakse ulkopuolelta.</li><li>Tämä ansoittaa jalan koukkusi ja vastustajan kehon väliin — hän ei voi astua jalkaa pois.</li><li>Säilytä Octopus-selkäote tiukkana. Kontrolloit nyt ylävartaloa (otteella) ja kaukaisempaa jalkaa (koukulla).</li></ol><b>Mitä tehdä tästä:</b><ul><li><b>Ko-soto reap (Sweeppi):</b> Aja eteenpäin Octopus-otteella. Koukku niittää polvea taaksepäin samalla kun kehosi paino tulee eteenpäin — vastustaja kaatuu sivulle/taakse.</li><li><b>Back Take:</b> Käytä koukkua keventämään kaukaisempaa jalkaa. Pujota alempi polvesi taakse ja kiipeä selkään.</li><li><b>Outside Single Leg:</b> Nouse polvillesi pitäen Octopus-otteen, muuta polvikoukku outside single-legiksi.</li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "id": "far_leg",
+        "label": "Far Leg Attack",
+        "sub": "Deep Half / Go Under",
+        "type": "category",
+        "info": {
+          "title": "Far Leg Attack (Deep Half Guard)",
+          "body": "<b>Suunta:</b> Kokonaan alle (Deep Half). Toimii raskasta litistämistä tai seisovia ohituksia vastaan.<br><br><b>Miten päästä positioon:</b><ol><li>Käytä kehyksiä houkutellaksesi eteenpäin suuntautuvaa painetta. Liu'u suoraan painopisteen alle — 'Homer Simpson' -tyylillä (litteänä mattoa pitkin).</li><li>Käännä kehosi kohtisuoraan. Piilota pää kauimmaisen takareiden/pohkeen taakse — suojassa giljotiineilta.</li><li>Tartu kauimmaiseen jalkaan (polvi tai reisi) molemmin käsin. Ansoita lähijalka jaloillasi.</li></ol>"
+        },
+        "children": [
+          {
+            "id": "fl_waiter",
+            "label": "Waiter Sweep",
+            "info": {
+              "title": "Waiter Sweep",
+              "body": "<b>Tilanne:</b> Vastustajan paino on suoraan yläpuolella tai hieman takana tasapainon säilyttämiseksi.<br><br><b>Suoritus:</b><ul><li>Tartu kauimmaisen polven taakse (Waiter Grip).</li><li>Asemoi jalkasi puristamaan kauimmaista reittä (pendulum / X-guard tyyliin).</li><li>Nosta kauimmainen jalka ja lantiosi suoraan ylöspäin kohti kattoa — kuin tarjoilija pitäisi suurta tarjotinta yhdellä kädellä.</li><li>Kun tasapaino häiriintyy, keinu lantiolla ja kaada hänet sivulle tai taakse. Nouse päälle.</li></ul>"
+            }
+          },
+          {
+            "id": "fl_old_school",
+            "label": "Old School / Homer",
+            "info": {
+              "title": "Old School / Homer Simpson",
+              "body": "<b>Tilanne:</b> Vastustaja istuu hyvin raskaasti leveällä asennolla estäen nostavat sweepit.<br><br><b>Suoritus:</b><ul><li>Kurota kehon yli alemmalla kädellä — tartu jalkojesi välissä olevan lähijalan varpaisiin.</li><li>Vaihda lockdowniin ja vedä varpaita tiukasti takareisi-vedolla (back-heel pull) omaan pakaraasi.</li><li>Käänny vahvasti kasvot alaspäin, nouse polvillesi yhdellä sulavalla rullaavalla liikkeellä eteenpäin.</li><li>Varvasote tuhoaa kyvyn postata. Aja taaksepäin/sivulle ja nouse Side Controliin.</li></ul>"
+            }
+          },
+          {
+            "id": "fl_x_guard",
+            "label": "X-Guard Entry",
+            "info": {
+              "title": "X-Guard Transition",
+              "body": "<b>Tilanne:</b> Vastustaja vastustaa levittämällä kauimmaisen jalan leveälle tai nousemalla seisomaan vahvalla tasapainolla.<br><br><b>Suoritus:</b><ul><li>Ammu sisempi jalkasi erittäin syvälle jalkojen väliin. Koukkaa kaukainen reisi/takaosa.</li><li>Aseta toinen jalkasi lähilantiolle — X-Guard -aloituspositio. Olet nyt painopisteen alla.</li><li>X-koukkujen avulla voit venyttää häntä pidemmälle ja suorittaa teknisen ylösnousu-sweepin, kipaten vastustajan taaksepäin.</li></ul>"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

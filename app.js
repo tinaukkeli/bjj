@@ -1,12 +1,23 @@
 // ─────────────────────────────────────────────
-// LAYOUT
+// APP — pure rendering/interaction logic.
+// No data here. All content comes from JSON files via loader.js.
 // ─────────────────────────────────────────────
+
+// ── Layout constants ──
 const NW   = 160;
 const NH   = 60;
 const HGAP = 200;
 const VGAP = 20;
 const PAD  = 48;
 
+// ── State ──
+let SYSTEMS   = {};
+let activeEl  = null;
+let currentSys = null;
+
+// ─────────────────────────────────────────────
+// LAYOUT
+// ─────────────────────────────────────────────
 function layoutTree(node, depth, cursor) {
   node._depth = depth;
   node._x = PAD + depth * (NW + HGAP);
@@ -43,9 +54,6 @@ function flattenTree(node, list = []) {
 // ─────────────────────────────────────────────
 // RENDER
 // ─────────────────────────────────────────────
-let activeEl  = null;
-let currentSys = null;
-
 function renderSystem(key) {
   currentSys = key;
   const sys   = SYSTEMS[key];
@@ -88,10 +96,10 @@ function renderSystem(key) {
     const el = document.createElement('div');
     el.className = 'node' + (n.type === 'root' ? ' root' : n.type === 'category' ? ' category' : '');
     el.id = 'nd-' + n.id;
-    el.style.left   = n._x + 'px';
-    el.style.top    = n._y + 'px';
-    el.style.width  = NW  + 'px';
-    el.style.minHeight = NH + 'px';
+    el.style.left      = n._x + 'px';
+    el.style.top       = n._y + 'px';
+    el.style.width     = NW  + 'px';
+    el.style.minHeight = NH  + 'px';
     el.innerHTML = `<span class="node-label">${n.label}</span>${n.sub ? `<span class="node-sub">${n.sub}</span>` : ''}`;
 
     if (n.info) {
@@ -109,11 +117,11 @@ function renderSystem(key) {
 // ─────────────────────────────────────────────
 // PAN & ZOOM — Mouse + Touch (pinch)
 // ─────────────────────────────────────────────
-let scale  = 1;
-let tx     = 0;
-let ty     = 0;
-let dragging = false;
-let dragStart= { x: 0, y: 0 };
+let scale     = 1;
+let tx        = 0;
+let ty        = 0;
+let dragging  = false;
+let dragStart = { x: 0, y: 0 };
 
 function applyTransform(anim = false) {
   const stage = document.getElementById('stage');
@@ -148,108 +156,18 @@ function doZoom(factor, cx, cy) {
   applyTransform(false);
 }
 
-// Mouse wheel zoom
-document.getElementById('viewport').addEventListener('wheel', e => {
-  e.preventDefault();
-  doZoom(e.deltaY < 0 ? 1.12 : 0.88, e.clientX, e.clientY);
-}, { passive: false });
-
-// Mouse drag pan
-const vp = document.getElementById('viewport');
-vp.addEventListener('mousedown', e => {
-  if (e.target.closest('.node')) return;
-  dragging  = true;
-  dragStart = { x: e.clientX - tx, y: e.clientY - ty };
-  vp.classList.add('panning');
-});
-document.addEventListener('mousemove', e => {
-  if (!dragging) return;
-  tx = e.clientX - dragStart.x;
-  ty = e.clientY - dragStart.y;
-  applyTransform(false);
-});
-document.addEventListener('mouseup', () => {
-  dragging = false;
-  vp.classList.remove('panning');
-});
-
-// Touch — single finger pan + two-finger pinch zoom
-let touch1 = null;
-let touch2 = null;
-let pinchStartDist = 0;
-let pinchStartScale = 1;
-let pinchMid = null;
-
-function getTouchDist(a, b) {
-  return Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
-}
-function getTouchMid(a, b) {
-  return { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 };
-}
-
-vp.addEventListener('touchstart', e => {
-  if (e.touches.length === 1) {
-    touch1 = { x: e.touches[0].clientX - tx, y: e.touches[0].clientY - ty };
-    touch2 = null;
-  } else if (e.touches.length === 2) {
-    touch2 = null;
-    pinchStartDist  = getTouchDist(e.touches[0], e.touches[1]);
-    pinchStartScale = scale;
-    pinchMid = getTouchMid(e.touches[0], e.touches[1]);
-    const vRect = vp.getBoundingClientRect();
-    pinchMid.x -= vRect.left;
-    pinchMid.y -= vRect.top;
-  }
-}, { passive: true });
-
-vp.addEventListener('touchmove', e => {
-  e.preventDefault();
-  if (e.touches.length === 1 && touch1 && !touch2) {
-    // panning
-    const t = e.touches[0];
-    // Only pan if not started as pinch
-    tx = t.clientX - touch1.x;
-    ty = t.clientY - touch1.y;
-    applyTransform(false);
-  } else if (e.touches.length === 2) {
-    // pinch zoom
-    const dist = getTouchDist(e.touches[0], e.touches[1]);
-    const factor = dist / pinchStartDist;
-    const newScale = Math.max(0.15, Math.min(3.5, pinchStartScale * factor));
-    const prev = scale;
-    scale = newScale;
-    tx += pinchMid.x - pinchMid.x * (scale / prev);
-    ty += pinchMid.y - pinchMid.y * (scale / prev);
-    applyTransform(false);
-    touch1 = null; // disable panning mid-pinch
-  }
-}, { passive: false });
-
-vp.addEventListener('touchend', e => {
-  if (e.touches.length === 0) {
-    touch1 = null;
-    touch2 = null;
-  } else if (e.touches.length === 1) {
-    touch1 = { x: e.touches[0].clientX - tx, y: e.touches[0].clientY - ty };
-  }
-}, { passive: true });
-
-// Buttons
-document.getElementById('btnZoomIn').onclick  = () => doZoom(1.2);
-document.getElementById('btnZoomOut').onclick = () => doZoom(0.8);
-document.getElementById('btnFit').onclick     = () => fitScreen(true);
-
 // ─────────────────────────────────────────────
 // TABS
 // ─────────────────────────────────────────────
 function buildTabs() {
   const bar = document.getElementById('tabBar');
+  bar.innerHTML = '';
   Object.entries(SYSTEMS).forEach(([key, sys]) => {
     const btn = document.createElement('button');
-    btn.className    = 'tab';
-    btn.textContent  = sys.label;
-    btn.dataset.key  = key;
-    btn.onclick      = () => selectSystem(key);
+    btn.className   = 'tab';
+    btn.textContent = sys.label;
+    btn.dataset.key = key;
+    btn.onclick     = () => selectSystem(key);
     bar.appendChild(btn);
   });
 }
@@ -261,7 +179,7 @@ function selectSystem(key) {
 }
 
 // ─────────────────────────────────────────────
-// MODAL — swipe down to close on mobile
+// MODAL
 // ─────────────────────────────────────────────
 function openModal(node, el) {
   if (activeEl) activeEl.classList.remove('active');
@@ -269,3 +187,112 @@ function openModal(node, el) {
   activeEl = el;
   document.getElementById('modalTitle').innerHTML = node.info.title;
   document.getElementById('modalBody').innerHTML  = node.info.body;
+  document.getElementById('overlay').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('overlay').classList.remove('open');
+  if (activeEl) { activeEl.classList.remove('active'); activeEl = null; }
+}
+
+// ─────────────────────────────────────────────
+// INIT — called by loader.js after JSON data is ready
+// ─────────────────────────────────────────────
+function initApp(systems) {
+  SYSTEMS = systems;
+
+  // Wire up buttons (safe to call after DOM is ready)
+  document.getElementById('btnZoomIn').onclick  = () => doZoom(1.2);
+  document.getElementById('btnZoomOut').onclick = () => doZoom(0.8);
+  document.getElementById('btnFit').onclick     = () => fitScreen(true);
+
+  // Mouse wheel zoom
+  document.getElementById('viewport').addEventListener('wheel', e => {
+    e.preventDefault();
+    doZoom(e.deltaY < 0 ? 1.12 : 0.88, e.clientX, e.clientY);
+  }, { passive: false });
+
+  // Mouse drag pan
+  const vp = document.getElementById('viewport');
+  vp.addEventListener('mousedown', e => {
+    if (e.target.closest('.node')) return;
+    dragging  = true;
+    dragStart = { x: e.clientX - tx, y: e.clientY - ty };
+    vp.classList.add('panning');
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    tx = e.clientX - dragStart.x;
+    ty = e.clientY - dragStart.y;
+    applyTransform(false);
+  });
+  document.addEventListener('mouseup', () => {
+    dragging = false;
+    vp.classList.remove('panning');
+  });
+
+  // Touch — single finger pan + two-finger pinch zoom
+  let touch1 = null;
+  let touch2 = null;
+  let pinchStartDist  = 0;
+  let pinchStartScale = 1;
+  let pinchMid = null;
+
+  function getTouchDist(a, b) { return Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY); }
+  function getTouchMid(a, b)  { return { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 }; }
+
+  vp.addEventListener('touchstart', e => {
+    if (e.touches.length === 1) {
+      touch1 = { x: e.touches[0].clientX - tx, y: e.touches[0].clientY - ty };
+      touch2 = null;
+    } else if (e.touches.length === 2) {
+      touch2 = null;
+      pinchStartDist  = getTouchDist(e.touches[0], e.touches[1]);
+      pinchStartScale = scale;
+      pinchMid = getTouchMid(e.touches[0], e.touches[1]);
+      const vRect = vp.getBoundingClientRect();
+      pinchMid.x -= vRect.left;
+      pinchMid.y -= vRect.top;
+    }
+  }, { passive: true });
+
+  vp.addEventListener('touchmove', e => {
+    e.preventDefault();
+    if (e.touches.length === 1 && touch1 && !touch2) {
+      tx = e.touches[0].clientX - touch1.x;
+      ty = e.touches[0].clientY - touch1.y;
+      applyTransform(false);
+    } else if (e.touches.length === 2) {
+      const dist = getTouchDist(e.touches[0], e.touches[1]);
+      const factor = dist / pinchStartDist;
+      const newScale = Math.max(0.15, Math.min(3.5, pinchStartScale * factor));
+      const prev = scale;
+      scale = newScale;
+      tx += pinchMid.x - pinchMid.x * (scale / prev);
+      ty += pinchMid.y - pinchMid.y * (scale / prev);
+      applyTransform(false);
+      touch1 = null;
+    }
+  }, { passive: false });
+
+  vp.addEventListener('touchend', e => {
+    if (e.touches.length === 0) { touch1 = null; touch2 = null; }
+    else if (e.touches.length === 1) {
+      touch1 = { x: e.touches[0].clientX - tx, y: e.touches[0].clientY - ty };
+    }
+  }, { passive: true });
+
+  // Modal close
+  document.getElementById('overlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('overlay')) closeModal();
+  });
+  document.getElementById('modalClose').onclick = closeModal;
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  window.addEventListener('resize', () => fitScreen(false));
+
+  // Build tabs and show first system
+  buildTabs();
+  const firstKey = Object.keys(SYSTEMS)[0];
+  if (firstKey) selectSystem(firstKey);
+}

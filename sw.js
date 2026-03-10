@@ -1,10 +1,12 @@
-const CACHE_NAME = 'bjj-v1';
+const CACHE_NAME = 'bjj-v3';
 const ASSETS = [
   '/bjj/',
   '/bjj/index.html',
   '/bjj/styles.css',
-  '/bjj/data.js',
   '/bjj/app.js',
+  '/bjj/loader.js',
+  '/bjj/data/half_guard.json',
+  '/bjj/data/standing.json',
   '/bjj/manifest.json',
   '/bjj/icon-192.png',
   '/bjj/icon-512.png',
