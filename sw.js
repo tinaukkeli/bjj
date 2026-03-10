@@ -2,6 +2,9 @@ const CACHE_NAME = 'bjj-v1';
 const ASSETS = [
   '/bjj/',
   '/bjj/index.html',
+  '/bjj/styles.css',
+  '/bjj/data.js',
+  '/bjj/app.js',
   '/bjj/manifest.json',
   '/bjj/icon-192.png',
   '/bjj/icon-512.png',
